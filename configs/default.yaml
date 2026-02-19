@@ -1,0 +1,22 @@
+# DVM Car Color Classification - default config
+
+data:
+  root: data/dvm_front
+  metadata_path: data/metadata.json
+  image_size: 224  # ImageNet standard for pretrained
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  seed: 42
+
+train:
+  batch_size: 64
+  epochs: 30
+  lr: 1e-3
+  weight_decay: 1e-4
+  lr_patience: 5
+  lr_factor: 0.5
+
+outputs:
+  dir: outputs
+  checkpoints_dir: outputs/checkpoints
